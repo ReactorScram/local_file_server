@@ -46,7 +46,8 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - shell: bash
+      - name: Check
+        shell: bash
         run: |
           set -euo pipefail
           shellcheck scripts/*
