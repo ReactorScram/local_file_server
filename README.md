@@ -1,14 +1,18 @@
 # local_file_server
 
-local_file_server is an HTTP server for localhost, based on Rust and Axum.
+local_file_server lets you view local HTML files in a web browser easier.
 
-The purpose is to make it easy to run web apps from sneakernet without the `file://` schema.
+local_file_server is a localhost-only HTTP server built with Rust and Axum.
 
 ## How to install
 
 FIXME
 
 ## Install from source
+
+For reproducible builds, use `scripts/build-linux-host.bash` which will invoke `cross-rs` and use pinned Podman images.
+
+For non-reproducible builds, just use Cargo:
 
 ```bash
 cargo install --locked --git https://github.com/ReactorScram/local_file_server

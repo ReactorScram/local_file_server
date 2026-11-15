@@ -2,10 +2,12 @@
 name = "local_file_server"
 edition = "2024"
 license-file = "LICENSE.md"
-version = "0.1.0"
+version = "1.0.0"
 
 [dependencies]
 axum = { version = "0.8.9", features = ["http1", "tokio"], default-features = false }
+camino = "1.2.6"
+clap = { version = "4.6.7", features = ["derive"] }
 tokio = { version = "1.54.1", features = ["macros", "rt"] }
 tower = "0.5.3"
 tower-http = { version = "0.7.1", features = ["fs"] }
