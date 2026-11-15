@@ -52,6 +52,6 @@ jobs:
           set -euo pipefail
           shellcheck scripts/*
           cargo fmt --check
-          cargo clippy
+          cargo clippy -- -D warnings
           cargo test
 
