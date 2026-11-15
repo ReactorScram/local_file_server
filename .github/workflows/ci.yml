@@ -16,3 +16,21 @@ jobs:
         run: |
           sudo apt-get install mingw-w64
           scripts/build-linux-host.bash
+      - uses: actions/upload-artifact@v7
+        with:
+          archive: false
+          name: local_file_server_gnulinux_amd64
+          path: target/x86_64-unknown-linux-gnu/release/local_file_server
+      - uses: actions/upload-artifact@v7
+        with:
+          archive: false
+          name: local_file_server_windows_amd64.exe
+          path: target/x86_64-pc-windows-gnu/release/local_file_server.exe
+
+  shellcheck:
+    runs-on: ubuntu-26.04
+
+    steps:
+      - shell: bash
+        run: shellcheck scripts/*
+
