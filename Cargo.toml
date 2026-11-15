@@ -18,3 +18,9 @@ codegen-units = 1
 lto = true
 debug = "none"
 strip = true
+
+[workspace.metadata.cross.target.x86_64-unknown-linux-gnu]
+image = "ghcr.io/cross-rs/x86_64-unknown-linux-gnu@sha256:8859395961030cc16506872272a547dce07126daf69007d492cb28217d37cd28"
+
+[workspace.metadata.cross.target.x86_64-pc-windows-gnu]
+image = "ghcr.io/cross-rs/x86_64-pc-windows-gnu@sha256:faf3c23e786ee681c32737331d76ef1a29d4c1d26f5c219ebd335a3f60d22629"
