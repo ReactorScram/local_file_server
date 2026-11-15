@@ -1,4 +1,6 @@
-#[tokio::main(flavor = "current_thread")]
-async fn main() {
-    println!("Waow");
+fn main() {
+    let rt = tokio::runtime::Builder::new_current_thread().build().unwrap();
+    rt.block_on(async {
+        println!("Waow");
+    });
 }
