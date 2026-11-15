@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# See https://reproducible-builds.org/docs/rust/
+# 20 seconds if everything's already built
+# 70 seconds after `cargo clean`
 
 set -euo pipefail
 

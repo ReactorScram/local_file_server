@@ -1,3 +1,9 @@
+fn main () {
+    println!("Waow");
+}
+
+/*
+
 use axum::Router;
 use std::net::SocketAddr;
 use tower_http::{services::ServeDir};
@@ -21,3 +27,5 @@ async fn serve(app: Router, port: u16) {
     .await
     .unwrap();
 }
+
+*/
