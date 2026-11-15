@@ -27,10 +27,11 @@ jobs:
           name: local_file_server_windows_amd64.exe
           path: target/x86_64-pc-windows-gnu/release/local_file_server.exe
 
-  shellcheck:
+  check:
     runs-on: ubuntu-26.04
 
     steps:
-      - shell: bash
+      - name: Shellcheck
+        shell: bash
         run: shellcheck scripts/*
 
