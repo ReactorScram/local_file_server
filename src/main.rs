@@ -1,3 +1,9 @@
+fn main() {
+    println!("Come on");
+}
+
+/*
+
 use axum::Router;
 use std::net::SocketAddr;
 use tower_http::services::ServeDir;
@@ -19,3 +25,5 @@ async fn serve(app: Router, port: u16) {
     webbrowser::open(&format!("http://127.0.0.1:{port}/assets/")).unwrap();
     axum::serve(listener, app).await.unwrap();
 }
+
+*/
