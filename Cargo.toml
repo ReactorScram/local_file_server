@@ -5,11 +5,11 @@ license-file = "LICENSE.md"
 version = "0.1.0"
 
 [dependencies]
-axum = { version = "0.8.9", features = ["http1", "tokio"], default-features = false }
+# axum = { version = "0.8.9", features = ["http1", "tokio"], default-features = false }
 tokio = { version = "1.54.1", features = ["macros", "rt"] }
-tower = "0.5.3"
-tower-http = { version = "0.7.1", features = ["fs"] }
-webbrowser = { version = "1.2.6", features = ["disable-wsl"] }
+# tower = "0.5.3"
+# tower-http = { version = "0.7.1", features = ["fs"] }
+# webbrowser = { version = "1.2.6", features = ["disable-wsl"] }
 
 [profile.release]
 panic = "abort"
