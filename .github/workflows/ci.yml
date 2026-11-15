@@ -46,7 +46,11 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - name: Shellcheck
-        shell: bash
-        run: shellcheck scripts/*
+      - shell: bash
+        run: |
+          set -euo pipefail
+          shellcheck scripts/*
+          cargo fmt --check
+          cargo clippy
+          cargo test
 
