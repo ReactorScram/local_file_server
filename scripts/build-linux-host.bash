@@ -5,11 +5,13 @@
 
 set -euo pipefail
 
+RUSTFLAGS="-C remap-path-prefix"
 SOURCE_DATE_EPOCH=$(git log -1 --pretty=%ct)
 TARGET_LINUX=x86_64-unknown-linux-gnu
 TARGET_WINDOWS=x86_64-pc-windows-gnu
 
 export CROSS_CONTAINER_ENGINE=podman
+export RUSTFLAGS="--remap-path-prefix=$HOME=/redacted/home/LVN66DBD"
 export SOURCE_DATE_EPOCH
 
 cargo +stable install cross --locked --git https://github.com/cross-rs/cross --rev a9301e91f72bba3850460512685f6b16062015ff
