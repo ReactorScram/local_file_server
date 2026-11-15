@@ -15,7 +15,7 @@ fn using_serve_dir() -> Router {
 
 async fn serve(app: Router, port: u16) {
     let addr = SocketAddr::from(([127, 0, 0, 1], port));
-    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
-    webbrowser::open(&format!("http://127.0.0.1:{port}/assets/")).unwrap();
+    // let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
+    // webbrowser::open(&format!("http://127.0.0.1:{port}/assets/")).unwrap();
     // axum::serve(listener, app).await.unwrap();
 }
