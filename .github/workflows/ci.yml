@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build-macos:
+    runs-on: ubuntu-26.04
+
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build
+        shell: bash
+        run: scripts/build-linux-host.bash
